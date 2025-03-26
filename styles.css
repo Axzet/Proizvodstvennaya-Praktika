@@ -71,10 +71,6 @@ main {
 .text {
     width: 50%;
 }
-.text-razdela{
-
-}
-
 .text-razdela h1 {
     font-size: 2.0em;
     margin-bottom: 15px;
@@ -101,13 +97,12 @@ main {
 
 .image-man {
     width: 100%;
-
 }
 
 .image-man img {
-    width: 100%;
-    max-width: 750px;
-   margin-left: 100px;
+    width: 550px;
+    max-width: 1000px;
+    margin-left: 600px;
 }
 .features {
     display: flex;
