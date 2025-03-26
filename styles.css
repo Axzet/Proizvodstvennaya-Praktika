@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-    width: 60px;
+    width: 100px;
     margin-right: 15px;
 }
 
@@ -59,6 +59,7 @@ nav a {
 
 main {
     padding: 30px 40px; /* Уменьшить основное заполнение чуть позднее */
+    margin-bottom: 45px;
 }
 
 .text {
@@ -69,6 +70,9 @@ main {
 
 .text {
     width: 50%;
+}
+.text-razdela{
+
 }
 
 .text-razdela h1 {
@@ -95,15 +99,15 @@ main {
     margin-top: 20px;
 }
 
-.image {
-    width: 45%;
-    text-align: center;
+.image-man {
+    width: 100%;
+
 }
 
-.image img {
+.image-man img {
     width: 100%;
-    max-width: 450px;
-    height: auto;
+    max-width: 750px;
+   margin-left: 100px;
 }
 .features {
     display: flex;
@@ -205,7 +209,7 @@ main {
         width: 100%;
     }
 
-    .image {
+    .image-man {
         width: 100%;
     }
 
