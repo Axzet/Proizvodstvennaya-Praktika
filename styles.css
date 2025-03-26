@@ -14,7 +14,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 main {
-    padding: 30px 40px; /* Reduce main padding */
+    padding: 30px 40px; /* Уменьшить основное заполнение чуть позднее */
 }
 
 .text {
@@ -69,5 +69,46 @@ main {
 }
 
 .feature-card {
+    width: 200px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
 
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.feature-card span {
+    font-size: 0.8em;
+    color: #666666;
+    line-height: 1.2;
+}
+
+.expert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.interface-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.interface-card img {
+    width: 50px;
+    height: 50px;
 }
