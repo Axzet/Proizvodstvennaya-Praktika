@@ -1,62 +1,36 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <title>Технопарк</title>
+  <title>Технопарк - Онлайн обучение для детей</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" href="images/logo.png">
 </head>
 <body>
-<header>
-  <div class="logo-section">
-    <img src="Images/logo.png" alt="Логотип Технопарка" class="logo">
-    <div class="info">
-      Муниципальное бюджетное учреждение дополнительного образования <br>
-      Центр технического творчества детей и юношества "Технопарк" <br>
-      Городского округа город Нефтекамск Республика Башкортостан
-    </div>
+<div id="particles-js"></div>
+
+<header class="glass-header">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Логотип Технопарка" class="logo">
+    <span class="logo-text">Центр Технического Творчества Детей и Юношества "Технопарк"</span>
   </div>
-  <nav>
-    <a href="#">О нас</a>
-    <a href="#">Программы</a>
-    <a href="#">Педагоги</a>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about_us.html">О нас</a></li>
+      <li><a href="programs.html">Программы</a></li>
+      <li><a href="states.html">Статьи</a></li>
+    </ul>
   </nav>
-  <div class="buttons-authorization">
-    <button class="buttons-login">Вход</button>
-    <button class="button-regist">Регистрация</button>
+
+  <div class="auth-buttons">
+    <a href="login.html" class="btn-login">Вход</a>
+    <a href="register.html" class="btn-register">Регистрация</a>
   </div>
 </header>
-<main>
-  <section class="text">
-    <div class="text-razdela">
-      <h1>Первые шаги <br> в программировании</h1>
-      <p>В нашей онлайн-школе дети от 7 до 16 лет осваивают базовое и продвинутое программирование во вдохновляющей среде</p>
-      <button class="button-start">Приступить</button>
-    </div>
-    <div class="image-man">
-      <img src="Images/3d%20human-main.png" alt="3D мальчик с ноутбуком">
-    </div>
-  </section>
-  <section class="features">
-    <div class="feature-card expert-card">
-      <img src="Images/human-main.png" alt="Эксперт">
-      <span>7+ лет опыта</span>
-    </div>
-    <div class="feature-card interface-card">
-      <div class="image-container">
-        <img src="Images/kid-main.png" alt="Интерфейс">
-        <div class="arrow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.49 19L12.07 17.58L16.64 13H4V11H16.64L12.07 6.42L13.49 5L20 11.5L13.49 19Z" fill="#444444"/>
-          </svg>
-        </div>
-      </div>
-      <span>Инновационные подходы и увлекательные интерфейсы для детей</span>
-    </div>
-  </section>
-<footer>
-</footer>
-</main>
 </body>
-<script src="scripts.js"></script>
+<script src="js/main.js"></script>
 </html>
