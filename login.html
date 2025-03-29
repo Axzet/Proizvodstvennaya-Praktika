@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Технопарк</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="icon" href="images/logo.png">
 </head>
 <body>
+<div id="particles-js"></div>
 
+<header class="glass-header">
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Логотип Технопарка" class="logo">
+        <span class="logo-text">Технопарк</span>
+    </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about_us.html">О нас</a></li>
+            <li><a href="programs.html">Программы</a></li>
+            <li><a href="states.html">Статьи</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-buttons">
+        <a href="login.html" class="btn-login active">Вход</a>
+        <a href="register.html" class="btn-register">Регистрация</a>
+    </div>
+
+    <div class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<main class="auth-container">
+    <div class="auth-card glass-card">
+        <div class="auth-header">
+            <h2>Вход в аккаунт</h2>
+            <p>Введите свои данные для доступа к курсам</p>
+        </div>
+
+        <form class="auth-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Ваш email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" placeholder="Ваш пароль" required>
+                <a href="#" class="forgot-password">Забыли пароль?</a>
+            </div>
+
+            <button type="submit" class="btn-auth">Войти</button>
+
+            <div class="auth-divider">
+                <span>или</span>
+            </div>
+
+            <div class="social-auth">
+                <button type="button" class="btn-social google">
+                    <img src="images/icons/google.svg" alt="Google">
+                    Войти через Google
+                </button>
+                <button type="button" class="btn-social vk">
+                    <img src="images/icons/vk.svg" alt="VK">
+                    Войти через VK
+                </button>
+            </div>
+        </form>
+
+        <div class="auth-footer">
+            <p>Ещё нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div class="auth-illustration">
+        <img src="images/auth-illustration.svg" alt="Дети учатся программировать">
+    </div>
+</main>
+<script src="js/main.js"></script>
 </body>
 </html>
