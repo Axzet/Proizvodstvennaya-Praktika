@@ -1,30 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Мобильное меню
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
 
-    mobileMenuBtn.addEventListener('click', function () {
+    mobileMenuBtn.addEventListener('click', function() {
         this.classList.toggle('active');
         mainNav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
     });
 
     // Закрытие меню при клике на ссылку
     const navLinks = document.querySelectorAll('.main-nav a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function() {
             mobileMenuBtn.classList.remove('active');
             mainNav.classList.remove('active');
+            document.body.classList.remove('menu-open');
         });
     });
-    document.addEventListener('DOMContentLoaded', function () {
-        // Определяем текущую страницу
-        const currentPage = location.pathname.split('/').pop();
 
-        // Устанавливаем активное состояние для кнопок
-        if (currentPage === 'login.html') {
-            document.querySelector('.btn-login').classList.add('active');
-        } else if (currentPage === 'register.html') {
-            document.querySelector('.btn-register').classList.add('active');
+    // Закрытие меню при изменении размера окна
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileMenuBtn.classList.remove('active');
+            mainNav.classList.remove('active');
+            document.body.classList.remove('menu-open');
         }
     });
 });
