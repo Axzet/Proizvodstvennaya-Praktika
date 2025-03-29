@@ -226,3 +226,30 @@
     height: auto;
     max-height: 500px;
 }
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .auth-container {
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+
+    .auth-card {
+        margin-right: 0;
+        margin-bottom: 3rem;
+        max-width: 500px;
+    }
+
+    .auth-illustration {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+}
