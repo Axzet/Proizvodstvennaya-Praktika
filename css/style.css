@@ -719,3 +719,145 @@ header {
 .icon-user::before { content: "👥"; }
 .icon-calendar::before { content: "📆"; }
 .icon-clock::before { content: "🕰️"; }
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .programs-grid.centered {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-section {
+        padding: 60px 0;
+    }
+
+    .program-card {
+        max-width: 100%;
+    }
+}
+/* Медиа запросы для адаптивности сайта */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s;
+    }
+
+    .main-nav.active {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: var(--primary-color);
+        transition: all 0.3s;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+@media (max-width: 1024px) {
+    .mission-content {
+        flex-direction: column;
+    }
+
+    .mission-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 80px 20px 40px;
+    }
+
+    .glass-header {
+        padding: 15px 20px;
+    }
+
+    .team-grid,
+    .programs-grid,
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
