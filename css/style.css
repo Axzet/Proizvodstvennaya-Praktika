@@ -3,13 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 main {
     padding: 100px 5% 60px;
     min-height: calc(100vh - 160px);
 }
-
 /* исправленная шапка, в прошлой версии чуть-чуть засланяла страницу */
 .glass-header {
     position: fixed;
@@ -25,50 +29,43 @@ main {
     padding: 0 20px;
 }
 .about-hero {
-    color: #000000;
+    background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
+    color: white;
     padding: 80px 0;
     text-align: center;
 }
-
 .about-mission {
     padding: 60px 0;
 }
-
 .mission-content {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    gap: 45px;
+    font-family: Verdana, Geneva, sans-serif;
 }
-
 .mission-text {
     flex: 1;
 }
-
 .mission-image {
     flex: 1;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-
 .mission-image img {
     width: 450px;
     height: auto;
     display: block;
 }
-
 .about-team {
     padding: 60px 0;
     background: #f9f9f9;
 }
-
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
-
 .team-member {
     background: white;
     border-radius: 16px;
@@ -77,11 +74,9 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
-
 .team-member:hover {
     transform: translateY(-10px);
 }
-
 .team-member img {
     width: 120px;
     height: 120px;
@@ -101,23 +96,15 @@ main {
     --glass-bg: rgba(255, 255, 255, 0.85);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-    background-color: var(--light-color);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+
 /* Стили для страницы "Программы" */
 .programs-hero {
     text-align: center;
     margin-top: 30px;
 }
-
 .programs-categories {
     padding: 60px 0;
 }
-
 .category-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -125,7 +112,6 @@ body {
     margin-bottom: 40px;
     justify-content: center;
 }
-
 .tab-btn {
     padding: 10px 20px;
     border-radius: 50px;
@@ -135,18 +121,15 @@ body {
     transition: all 0.3s;
     font-weight: 600;
 }
-
 .tab-btn.active {
     background: var(--primary-color);
     color: white;
 }
-
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
-
 .program-card {
     background: white;
     border-radius: 16px;
@@ -154,27 +137,24 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
-
 .program-card:hover {
     transform: translateY(-10px);
 }
+
 /* Стили для страницы "Статьи" */
 .articles-hero {
     text-align: center;
     margin-top: 30px;
 }
-
 .articles-list {
     padding: 60px 0;
 }
-
 .articles-filter {
     display: flex;
     gap: 20px;
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
-
 .search-input {
     flex: 1;
     min-width: 250px;
@@ -183,7 +163,6 @@ body {
     border-radius: 50px;
     font-size: 16px;
 }
-
 .category-select {
     padding: 12px 20px;
     border: 1px solid #e5e7eb;
@@ -191,13 +170,11 @@ body {
     font-size: 16px;
     background: white;
 }
-
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
-
 .article-card {
     background: white;
     border-radius: 16px;
@@ -205,7 +182,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
-
 .article-card:hover {
     transform: translateY(-10px);
 }
@@ -225,7 +201,6 @@ header {
     display: flex;
     gap: 1rem;
 }
-
 .btn-login, .btn-register {
     padding: 0.6rem 1.25rem;
     border-radius: 50px;
@@ -237,13 +212,11 @@ header {
     display: inline-block;
     text-align: center;
 }
-
 .btn-login {
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
-
 .btn-register {
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -254,18 +227,17 @@ header {
     background: rgba(79, 70, 229, 0.1);
     text-decoration: none;
 }
-
 .btn-register:hover {
     background: #4338CA;
     border-color: #4338CA;
     text-decoration: none;
 }
+
 /* Стили для кнопки, чтобы отображалась активность */
 .btn-login.active {
     background: rgba(79, 70, 229, 0.1);
     font-weight: 700;
 }
-
 .btn-register.active {
     background: #4338CA;
     font-weight: 700;
@@ -275,24 +247,20 @@ header {
     align-items: center;
     gap: 0.75rem;
 }
-
 .logo {
     height: 2.5rem;
     width: auto;
 }
-
 .logo-text {
     font-weight: 700;
     font-size: 1.25rem;
     color: var(--primary-color);
 }
-
 .main-nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
 }
-
 .main-nav a {
     text-decoration: none;
     color: var(--text-color);
@@ -313,22 +281,18 @@ header {
     background-color: var(--primary-color);
     transition: width 0.3s;
 }
-
 .main-nav a:hover::after,
 .main-nav a.active::after {
     width: 100%;
 }
-
 .main-nav a:hover,
 .main-nav a.active {
     color: var(--primary-color);
 }
-
 .auth-buttons {
     display: flex;
     gap: 1rem;
 }
-
 .btn-login, .btn-register {
     padding: 0.6rem 1.25rem;
     border-radius: 50px;
@@ -337,27 +301,24 @@ header {
     cursor: pointer;
     transition: all 0.3s;
 }
-
 .btn-login {
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
-
 .btn-register {
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: white;
 }
-
 .btn-login:hover {
     background: rgba(79, 70, 229, 0.1);
 }
-
 .btn-register:hover {
     background: #4338CA;
     border-color: #4338CA;
 }
+
 /* Секции 1-го плана */
 .hero-section {
     display: flex;
@@ -365,20 +326,17 @@ header {
     position: relative;
     overflow: hidden;
 }
-
 .hero-content {
     flex: 1;
     max-width: 600px;
     z-index: 2;
 }
-
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
-
 .hero-title span {
     color: var(--primary-color);
     position: relative;
@@ -389,7 +347,6 @@ header {
     margin-bottom: 2.5rem;
     max-width: 500px;
 }
-
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -403,31 +360,26 @@ header {
     cursor: pointer;
     transition: all 0.3s;
 }
-
 .btn-primary {
     background: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: white;
     text-decoration: none;
 }
-
 .btn-secondary {
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
 }
-
 .btn-primary:hover {
     background: #4338CA;
     border-color: #4338CA;
     transform: translateY(-2px);
 }
-
 .btn-secondary:hover {
     background: rgba(79, 70, 229, 0.1);
     transform: translateY(-2px);
 }
-
 .hero-image {
     flex: 1;
     display: flex;
@@ -436,7 +388,6 @@ header {
     z-index: 1;
     margin-right: 100px;
 }
-
 .hero-image img {
     max-width: 100%;
     height: auto;
@@ -451,7 +402,6 @@ header {
     margin-bottom: 3rem;
     position: relative;
 }
-
 .section-title::after {
     content: '';
     position: absolute;
@@ -463,12 +413,10 @@ header {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     border-radius: 2px;
 }
-
 .features-section {
     padding: 5rem 5%;
     background-color: white;
 }
-
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -476,7 +424,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .feature-card {
     background: #ebebeb;
     border-radius: 16px;
@@ -485,12 +432,10 @@ header {
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
 }
-
 .feature-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-
 .feature-icon {
     width: 80px;
     height: 80px;
@@ -507,35 +452,31 @@ header {
     height: 40px;
     transform: scale(1.1);
 }
-
 .feature-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
 }
-
 .feature-card p {
     color: var(--text-light);
     font-size: 0.95rem;
 }
-
 .popular-courses {
     padding: 5rem 5%;
     background-color: var(--light-color);
 }
-
 .courses-slider {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
+
 /* Подвал */
 .main-footer {
     background: var(--dark-color);
     color: white;
     padding: 4rem 5% 2rem;
 }
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -543,24 +484,20 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
-
 .footer-about img {
     height: 2.5rem;
     margin-bottom: 1rem;
 }
-
 .footer-about p {
     color: #D1D5DB;
     font-size: 0.9rem;
 }
-
 .footer-links h4,
 .footer-contacts h4 {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     position: relative;
 }
-
 .footer-links h4::after,
 .footer-contacts h4::after {
     content: '';
@@ -571,37 +508,32 @@ header {
     height: 3px;
     background: var(--primary-color);
 }
-
 .footer-links ul {
     list-style: none;
 }
-
 .footer-links li {
     margin-bottom: 0.75rem;
 }
-
 .footer-links a {
     color: #D1D5DB;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
 }
-
 .footer-links a:hover {
     color: white;
 }
-
 .footer-contacts p {
     color: #D1D5DB;
     font-size: 0.9rem;
     margin-bottom: 0.75rem;
 }
+
 /* Стили для секции на странице "programs" */
 .programs-section {
     padding: 80px 0;
     background-color: #f9fafb;
 }
-
 .programs-grid.centered {
     display: flex;
     justify-content: center;
@@ -610,7 +542,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .program-card {
     width: 100%;
     max-width: 360px;
@@ -622,12 +553,10 @@ header {
     display: flex;
     flex-direction: column;
 }
-
 .program-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
-
 .card-header {
     padding: 25px;
     text-align: center;
@@ -635,7 +564,6 @@ header {
     color-mix(in srgb, var(--card-color), white 30%) 100%);
     color: white;
 }
-
 .card-icon {
     width: 70px;
     height: 70px;
@@ -647,35 +575,29 @@ header {
     justify-content: center;
     padding: 15px;
 }
-
 .card-icon img {
     width: 100%;
     height: auto;
     filter: brightness(0) invert(1);
 }
-
 .card-header h3 {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 700;
 }
-
 .card-body {
     padding: 25px;
     flex-grow: 1;
 }
-
 .card-description {
     color: var(--text-color);
     margin-bottom: 20px;
     line-height: 1.5;
     font-size: 1rem;
 }
-
 .card-details {
     margin-top: 20px;
 }
-
 .card-details p {
     display: flex;
     align-items: center;
@@ -683,18 +605,15 @@ header {
     color: var(--text-light);
     font-size: 0.9rem;
 }
-
 .card-details i {
     margin-right: 10px;
     color: var(--card-color);
     font-size: 1.1rem;
 }
-
 .card-footer {
     padding: 0 25px 25px;
     text-align: center;
 }
-
 .btn-card {
     background: var(--card-color);
     color: white;
@@ -708,7 +627,6 @@ header {
     max-width: 200px;
     text-decoration: none;
 }
-
 .btn-card:hover {
     background: color-mix(in srgb, var(--card-color), black 15%);
     transform: translateY(-2px);
@@ -719,18 +637,17 @@ header {
 .icon-user::before { content: "👥"; }
 .icon-calendar::before { content: "📆"; }
 .icon-clock::before { content: "🕰️"; }
+
 /* Адаптивность */
 @media (max-width: 1024px) {
     .programs-grid.centered {
         justify-content: space-around;
     }
 }
-
 @media (max-width: 768px) {
     .programs-section {
         padding: 60px 0;
     }
-
     .program-card {
         max-width: 100%;
     }
@@ -748,25 +665,20 @@ header {
         text-align: center;
         padding-top: 6rem;
     }
-
     .hero-content {
         max-width: 100%;
         margin-bottom: 3rem;
     }
-
     .hero-buttons {
         justify-content: center;
     }
-
     .hero-title {
         font-size: 2.25rem;
     }
-
     .hero-subtitle {
         margin-left: auto;
         margin-right: auto;
     }
-
     .main-nav {
         position: fixed;
         top: 80px;
@@ -780,7 +692,6 @@ header {
         justify-content: center;
         transition: left 0.3s;
     }
-
     .main-nav.active {
         left: 0;
     }
@@ -800,7 +711,6 @@ header {
         cursor: pointer;
         z-index: 1001;
     }
-
     .mobile-menu-btn span {
         display: block;
         width: 100%;
@@ -808,29 +718,23 @@ header {
         background: var(--primary-color);
         transition: all 0.3s;
     }
-
     .mobile-menu-btn.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-
     .mobile-menu-btn.active span:nth-child(2) {
         opacity: 0;
     }
-
     .mobile-menu-btn.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
     }
-
     .hero-buttons {
         flex-direction: column;
     }
-
     .section-title {
         font-size: 1.75rem;
     }
@@ -839,22 +743,18 @@ header {
     .mission-content {
         flex-direction: column;
     }
-
     .mission-image {
         order: -1;
         margin-bottom: 30px;
     }
 }
-
 @media (max-width: 768px) {
     main {
         padding: 80px 20px 40px;
     }
-
     .glass-header {
         padding: 15px 20px;
     }
-
     .team-grid,
     .programs-grid,
     .articles-grid {

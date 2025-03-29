@@ -1,0 +1,204 @@
+/* Появление элементов*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Плавное исчезновение */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Пульсация к кнопке */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Эффект к иллюстрациям */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Классное подчеркивание ссылок */
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Эффект при клике */
+@keyframes wave {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+/* Применение анимаций */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.spin {
+    animation: spin 1.5s linear infinite;
+}
+
+/* Тень для иконок и их смещение */
+.feature-icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+}
+
+/* Анимация кнопок */
+.btn-primary, .btn-secondary {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: wave 0.6s linear;
+}
+/* Анимация загрузки */
+.skeleton {
+    background: linear-gradient(
+            90deg,
+            #f3f4f6 25%,
+            #e5e7eb 50%,
+            #f3f4f6 75%
+    );
+    background-size: 400% 100%;
+    animation: skeletonLoading 1.5s infinite;
+}
+
+/* Мобильное меню выплывает */
+.main-nav {
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Анимация к иконкам социальных сетей */
+.btn-social img {
+    transition: transform 0.3s ease;
+}
+
+.btn-social:hover img {
+    transform: scale(1.1);
+}
+
+/* Адаптивные анимации */
+@media (max-width: 768px) {
+    .float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .course-card:hover {
+        transform: none;
+    }
+}
+
+/* Переходы */
+.smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* Анимация ошибок */
+@keyframes shake {
+    10%, 90% { transform: translateX(-1px); }
+    20%, 80% { transform: translateX(2px); }
+    30%, 50%, 70% { transform: translateX(-4px); }
+    40%, 60% { transform: translateX(4px); }
+}
+
+.input-error {
+    animation: shake 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: #ef4444 !important;
+}
+
+/* Анимация появления уведомлений */
+@keyframes slideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.notification {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Анимация прогресс-бара */
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.progress-bar {
+    animation: progress 2s ease-in-out forwards;
+}
+
+/* Перекдючение кнопок через клавишу Tab(помогает от лагов мыши) */
+.tab-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.tab-content-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-content-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-content-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+}
