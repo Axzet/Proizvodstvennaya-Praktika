@@ -1,3 +1,4 @@
+// Отслеживает клики по кнопке меню
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
